@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Weather API</string>
+
+    <string name="WEATHER_PREFS">weather_prefs</string>
+    <string name="WEATHER_DATA">weather_data</string>
+    <string name="PLACE_DATA">place_data</string>
+</resources>
