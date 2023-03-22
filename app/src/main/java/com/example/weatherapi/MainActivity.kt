@@ -179,12 +179,15 @@ class MainActivity : AppCompatActivity() {
 
     private fun updateUI(it : Weather) {
         var temp = it.temp
-        temp = temp.substring(0, temp.indexOf("."))
+        if(temp.contains("."))
+            temp = temp.substring(0, temp.indexOf("."))
         val desc = it.description
         var minTemp = it.maxTemp
-        minTemp = minTemp.substring(0, minTemp.indexOf(".")) + "°C"
+        if (minTemp.contains("."))
+            minTemp = minTemp.substring(0, minTemp.indexOf(".")) + "°C"
         var maxTemp = it.minTemp
-        maxTemp = maxTemp.substring(0, maxTemp.indexOf(".")) + "°C"
+        if(maxTemp.contains("."))
+            maxTemp = maxTemp.substring(0, maxTemp.indexOf(".")) + "°C"
 
         val hours = it.timeUpdated.hours
         val minutes = it.timeUpdated.minutes
